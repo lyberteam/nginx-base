@@ -16,9 +16,7 @@ RUN mkdir -p /etc/service/nginx
 ADD run.sh /etc/service/nginx/run
 RUN chmod +x /etc/service/nginx/run
 
-ADD etc/nginx.conf /etc/nginx/nginx.conf
-ADD etc/conf.d/upstream.conf /etc/nginx/conf.d/upstream.conf
-ADD etc/vhost/lyberteam.conf /etc/nginx/vhost/lyberteam.conf
+ADD etc/* /etc/nginx/
 
 RUN mkdir -p /var/www
 RUN mkdir -p /var/lib/nginx/cache
